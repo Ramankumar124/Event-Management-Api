@@ -31,3 +31,7 @@ export const createUserSchema = z.object({
     .email({ message: "Invalid email format" })
     .max(255, { message: "Email must be less than 255 characters" }),
 });
+
+export const cancelRegistrationSchema =z.object({
+userId: z.string({ error: "User ID is required" })
+})
