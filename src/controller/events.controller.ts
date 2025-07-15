@@ -32,7 +32,7 @@ export const createEvent = asyncHandler(
 
     const eventId = newEvent?.id;
     res
-      .status(200)
+      .status(201)
       .json(new ApiResponse(201, eventId, "Event created successfully"));
   }
 );
