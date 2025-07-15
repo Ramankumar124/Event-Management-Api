@@ -13,15 +13,15 @@ const errorHandler = (
   }
 
   if (err instanceof ZodError) {
-    res.status(400).json({
+    return res.status(400).json({
       success: false,
-      message: err.errors.map((error) => error.message)
-
+      message: err.issues.map((issue) => issue.message),
     });
   }
-  res.status(err.statusCode || 500).json({
+
+  return res.status(err.statusCode || 500).json({
     success: false,
-    message: err.message || 'Internal Server Error',
+    message: err.message || "Internal Server Error",
   });
 };
 

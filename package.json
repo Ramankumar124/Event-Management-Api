@@ -15,10 +15,13 @@
   "type": "commonjs",
   "main": "server.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dist/server.js",
+    "dev": "nodemon"
   },
   "devDependencies": {
     "@types/cookie": "^0.6.0",
+    "@types/cookie-parser": "^1.4.9",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
     "@types/morgan": "^1.9.10",
@@ -34,6 +37,7 @@
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
     "dotenv": "^17.2.0",
+    "express": "^5.1.0",
     "morgan": "^1.10.0",
     "nodemon": "^3.1.10",
     "winston": "^3.17.0",
